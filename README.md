@@ -25,3 +25,15 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+
+## TRANSFORM JSON TO TYPE SCRIP
+https://transform.tools/json-to-typescript
+
+
+## API :PractoHospital
+http://freeapi.gerasim.in/index.html
+
+
+## TRAINING LIK: youtube
+https://www.youtube.com/watch?v=7CxKW3pPkLo&list=PL7JmcZV0UQtU5ds45KRtSXA19sOntKTnI&index=2
