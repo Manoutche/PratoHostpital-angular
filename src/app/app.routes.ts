@@ -5,6 +5,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { HospitalListComponent } from './pages/hospital-list/hospital-list.component';
 import { PatientListComponent } from './pages/patient-list/patient-list.component';
 import { NewHospitalComponent } from './pages/new-hospital/new-hospital.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 export const routes: Routes = [
   {
@@ -35,5 +36,9 @@ export const routes: Routes = [
   {
     path:'new-hospital',
     component: NewHospitalComponent
+  },
+  {
+    path: '**',
+    component: NotFoundComponent
   }
 ];

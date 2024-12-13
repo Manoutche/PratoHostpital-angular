@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HospitalService } from '../../core/servives/hospital.service';
 import { ApiResponse } from '../../core/interface/api-response';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-new-hospital',
@@ -14,6 +15,8 @@ import { ApiResponse } from '../../core/interface/api-response';
 })
 export class NewHospitalComponent {
   public hospitalObj: Hospital = new Hospital()
+
+  private subscription : Subscription [] = []
 
   constructor(private hospitalSrv: HospitalService){
 
@@ -29,5 +32,9 @@ export class NewHospitalComponent {
     },error=>{
       alert(JSON.stringify(error))
     })
+  }
+
+  clearHospital(){
+    this.hospitalObj = new Hospital()
   }
 }
