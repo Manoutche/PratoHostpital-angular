@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Hospital } from '../../core/models/hospital.model';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { HospitalService } from '../../core/servives/hospital.service';
+import { HospitalService } from '../../core/services/hospital.service';
 import { ApiResponse } from '../../core/interface/api-response';
 import { Subscription } from 'rxjs';
 

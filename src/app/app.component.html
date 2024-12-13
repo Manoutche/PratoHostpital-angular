@@ -7,12 +7,20 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
+        <li class="nav-item" *ngIf="loggeHospital.hospitalId !=0" >
+          <a class="nav-link" [routerLink]="['/appointment']" routerLinkActive="router-link-active" >Appointment</a>
+        </li>
+        <li class="nav-item" *ngIf="loggeHospital.hospitalId !=0" >
+          <a class="nav-link" [routerLink]="['/patient']" routerLinkActive="router-link-active" >Patients</a>
+        </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Link</a>
         </li>
       </ul>
       <div class="d-flex">
-        <button class="btn btn-outline-primary" type="button" (click)="showLogin()">Login</button>
+        <button class="btn btn-outline-primary " *ngIf="loggeHospital.hospitalId !=0" type="button">{{ loggeHospital.hospitalEmailId }}</button>
+        <button class="btn btn-outline-warning m-1" *ngIf="loggeHospital.hospitalId !=0" (click)="logOut()" type="button">Log out</button>
+        <button class="btn btn-outline-primary" *ngIf="loggeHospital.hospitalId ==0" type="button" (click)="showLogin()">Login</button>
       </div>
     </div>
   </div>
@@ -32,17 +40,17 @@
         <form>
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Username</label>
-            <input type="email" [(ngModel)]="userObj.userName" class="form-control" aria-describedby="emailHelp">
+            <input type="email" [(ngModel)]="userObj.userName" name="userName" class="form-control">
           </div>
           <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" [(ngModel)]="userObj.userName" class="form-control">
+            <input type="password" [(ngModel)]="userObj.password" name="password" class="form-control">
           </div>
         </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" (click)="closLogin()">Close</button>
-        <button type="button" class="btn btn-primary">Submit</button>
+        <button type="button" class="btn btn-primary" (click)="onLogin()">Submit</button>
       </div>
     </div>
   </div>
