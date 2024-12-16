@@ -19,7 +19,7 @@ export const routes: Routes = [
   },
   {
     path:'appointment',
-    component: AppointmentListComponent
+    component: AppointmentListComponent,
   },
   {
     path:'dashboard',
@@ -42,3 +42,4 @@ export const routes: Routes = [
     component: NotFoundComponent
   }
 ];
+

@@ -1,4 +1,16 @@
 export class Appointment {
+
+  name: string;
+  mobileNo: string;
+  city: string;
+  age: number;
+  gender: string;
+  appointmentDate: Date;
+  appointmentTime: string;
+  isFirstVisit: boolean;
+  naration: string;
+  hospitalId: number;
+
   constructor() {
     this.name = ''
     this.mobileNo = ''
@@ -11,14 +23,4 @@ export class Appointment {
     this.naration =''
     this.hospitalId =0
   }
-  name: string;
-  mobileNo: string;
-  city: string;
-  age: number;
-  gender: string;
-  appointmentDate: Date;
-  appointmentTime: string;
-  isFirstVisit: boolean;
-  naration: string;
-  hospitalId: number;
 }
