@@ -10,6 +10,7 @@ export class Appointment {
   isFirstVisit: boolean;
   naration: string;
   hospitalId: number;
+  appointmentId: number;
 
   constructor() {
     this.name = ''
@@ -22,5 +23,6 @@ export class Appointment {
     this.isFirstVisit =false
     this.naration =''
     this.hospitalId =0
+    this.appointmentId =0
   }
 }

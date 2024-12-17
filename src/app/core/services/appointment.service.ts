@@ -11,9 +11,18 @@ import { Constant } from '../contant/Constant';
 })
 export class AppointmentService {
 
+
   constructor(private http: HttpClient) { }
 
   newAppointmentService(obj:Appointment):Observable<ApiResponse> {
     return this.http.post<ApiResponse> (environment.api_url + Constant.API_END_POINT.NEW_APPOINTMENT,obj)
+  }
+
+  getAppointmentByHospital(id: number): Observable <ApiResponse> {
+    return this.http.get<ApiResponse>(environment.api_url + Constant.API_END_POINT.APPOINTMENT_BY_HOSPITAL+ id)
+  }
+
+  deleteAppointmentById(appoint: any): Observable <ApiResponse> {
+    return this.http.delete<ApiResponse>(environment.api_url + Constant.API_END_POINT.DEL_APPOINTMENT+appoint)
   }
 }

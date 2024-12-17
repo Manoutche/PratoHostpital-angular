@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { Route, Router, RouterLink, RouterOutlet } from '@angular/router';
 import { User } from './core/models/user.model';
 import { FormsModule } from '@angular/forms';
 import { HospitalService } from './core/services/hospital.service';
@@ -17,10 +17,12 @@ import { CommonModule } from '@angular/common';
 export class AppComponent {
 
 
-  constructor(private hospitalSrv: HospitalService){
+  constructor(private hospitalSrv: HospitalService, private router: Router){
     const loggData = localStorage.getItem('practoLogin')
     if (loggData != null) {
       this.loggeHospital = JSON.parse(loggData)
+    }else{
+      this.router.navigateByUrl('home')
     }
 
   }
@@ -60,5 +62,6 @@ export class AppComponent {
   logOut() {
     localStorage.removeItem('practoLogin')
     this.loggeHospital = new Hospital()
+    this.router.navigateByUrl('home')
   }
 }
