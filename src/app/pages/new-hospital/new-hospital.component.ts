@@ -7,11 +7,10 @@ import { ApiResponse } from '../../core/interface/api-response';
 import { Subscription } from 'rxjs';
 
 @Component({
-  selector: 'app-new-hospital',
-  standalone: true,
-  imports: [CommonModule,FormsModule],
-  templateUrl: './new-hospital.component.html',
-  styleUrl: './new-hospital.component.css'
+    selector: 'app-new-hospital',
+    imports: [CommonModule, FormsModule],
+    templateUrl: './new-hospital.component.html',
+    styleUrl: './new-hospital.component.css'
 })
 export class NewHospitalComponent {
   public hospitalObj: Hospital = new Hospital()

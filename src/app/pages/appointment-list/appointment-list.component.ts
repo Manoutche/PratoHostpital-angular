@@ -6,11 +6,10 @@ import { AppointmentService } from '../../core/services/appointment.service';
 import { ApiResponse } from '../../core/interface/api-response';
 
 @Component({
-  selector: 'app-appointment-list',
-  standalone: true,
-  imports: [CommonModule, FormsModule],
-  templateUrl: './appointment-list.component.html',
-  styleUrl: './appointment-list.component.css',
+    selector: 'app-appointment-list',
+    imports: [CommonModule, FormsModule],
+    templateUrl: './appointment-list.component.html',
+    styleUrl: './appointment-list.component.css'
 })
 export class AppointmentListComponent  implements OnInit {
 
